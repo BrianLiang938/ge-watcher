@@ -1,0 +1,64 @@
+{
+  "name": "runescape-api",
+  "version": "2.1.6",
+  "description": "Simple wrapper for RuneScape APIs written in node.",
+  "author": "Joshua Filby <joshua@filby.me>",
+  "maintainers": [
+    "Astrect <astrect@astrect.me> (https://astrect.me)"
+  ],
+  "keywords": [
+    "Oldschool",
+    "Old School",
+    "Runescape",
+    "OSRS",
+    "2007scape",
+    "Runescape 3"
+  ],
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "commit": "npx git-cz@4.2.0",
+    "cz": "npm run commit",
+    "dev": "rimraf build && tsc --watch",
+    "format": "prettier ./{src,__{tests,mocks}__}/{**,**/**}/*.{js,jsx,ts,tsx} --write",
+    "lint": "eslint src --ext=\".js,.jsx,.ts,.tsx\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "got": "^11.8.2",
+    "slugify": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astrect/runescape-api"
+  },
+  "bugs": {
+    "url": "https://github.com/astrect/runescape-api/issues"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.+(ts|tsx|js)",
+      "**/?(*.)+(spec|test).+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "license": "MIT"
+}
