@@ -1,7 +1,7 @@
 
 import { grandexchange } from "runescape-api/osrs/index.js"
 
-
+//testing
 //const fetch = require('node-fetch');
 const api_url = 'https://secure.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=556';
 
