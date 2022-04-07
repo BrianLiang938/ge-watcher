@@ -1,7 +1,7 @@
 const { Client, Intents } = require('discord.js');
-
+const { token } = require("process.env");
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-client.login('OTYxNDExNzkwNzE2MTc0Mzg4.Yk4mgQ.M1nAgjcBoIKNjWAu0qc3WN_FTyA');
+client.login(token);
 client.on('ready', readyDiscord);
 
 
