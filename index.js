@@ -1,12 +1,13 @@
+const { Client, Intents } = require('discord.js');
 
-import { grandexchange } from "runescape-api/osrs/index.js"
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+client.login('OTYxNDExNzkwNzE2MTc0Mzg4.Yk4mgQ.M1nAgjcBoIKNjWAu0qc3WN_FTyA');
+client.on('ready', readyDiscord);
 
-//testing
-//const fetch = require('node-fetch');
-const api_url = 'https://secure.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=556';
 
-async function test() {
-    /*
+//const api_url = 'https://secure.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=556';
+
+/*async function test() {
      const request = await fetch(api_url);
      const json = await request.json();
      const item = json.item;
@@ -14,9 +15,17 @@ async function test() {
      const {members, id} = item;
      console.log(id);
      console.log(members);
-     */
-     grandexchange.getItemGraph(556).then(data => {
-        console.log(data)
-    })
 }
-test();
+
+function bot() {
+    const client = new Discord.Client();
+    client.login('OTYxNDExNzkwNzE2MTc0Mzg4.Yk4mgQ.M1nAgjcBoIKNjWAu0qc3WN_FTyA');
+    client.on('ready', readyDiscord);
+}
+*/
+
+function readyDiscord() {
+    console.log("Im in B)");
+}
+//bot();
+//test();
