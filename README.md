@@ -7,6 +7,7 @@
   <li>Ping Discord bot to send notification</li>
   <li>Store buy offers for whitelisted items automatically via RuneLite API, save in database</li>
   <li>Autodetect sell offers for whitelisted items automatically via RuneList API, save in database with timestamps and calculate profit</li>
+  <li>Build website, import 90% of code </li>
 </ol>
 
 <h3>Stretch Goal</h3>
@@ -17,3 +18,4 @@
 
 <h3>Changelog</h3>
 - 4/6/22 Created repo
+- 4/16/22 Mean Code created, bot framework complete
