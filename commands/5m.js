@@ -15,16 +15,19 @@ module.exports = {
 		const data = json.data;
 		const vals = [];
 		let avg = 0;
+		let count = 0;
 		for (let i = 0; i < 20; i++) {
 			vals.push(data[size - 1 - i]);
 			const high = data[size - 1 - i].avgHighPrice;
+			if (high != null) {
+				count++;
+			}
 			const tax = Math.floor(high * 0.01);
 			avg += high - tax;
 			console.log(high);
 		}
-		avg = avg / 20;
-		console.log(avg);
-		await interaction.reply('/5m ' + vals.length);
+		avg = avg / count;
+		await interaction.reply('Average price of ID ' + input + ' is ' + avg);
 		// const item = json.item;
 		// const price = item.current.price;
 		// await interaction.reply('/search ' + input + '\nName of the item: ' + name + '\nPrice of the item: ' + price + ' gp');
