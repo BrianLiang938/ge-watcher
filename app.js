@@ -1,6 +1,4 @@
 const fetch = require('node-fetch');
-<<<<<<< HEAD
-=======
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -55,7 +53,6 @@ function average(array) {
     }
     return output / count;
 }
->>>>>>> 0cbf05d693e926de00169124829ee62bea001586
 
 async function test() {
     const api_url = `https://prices.runescape.wiki/api/v1/osrs/timeseries?timestep=5m&id=556`;
