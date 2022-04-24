@@ -19,6 +19,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+
 // little image in browser, needed to not run middleware twice and get exceptions
 const favicon = require('serve-favicon');
 app.use(favicon(__dirname + '/favicon.ico'));
