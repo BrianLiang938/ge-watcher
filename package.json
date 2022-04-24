@@ -12,9 +12,10 @@
     "mongoose": "^6.3.0",
     "node-fetch": "2.0",
     "npm": "^8.6.0",
-    "runescape-api": "^2.1.6"
+    "runescape-api": "^2.1.6",
+    "serve-favicon": "^2.5.0"
   },
-  "name": "practicejs",
+  "name": "ge-watcher",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -22,8 +23,16 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "<h1>TODO</h1>\r <ol>\r   <li>Use GE API to track current price, and find pull 5 min, 1 week, 1 month trendlines with volume (Here!)</li>\r   <li>Use mean reversion algo to detect swings in price for whitelisted items</li>\r   <li>Store buy offers for whitelisted items automatically via RuneLite API, save in database</li>\r   <li>Autodetect sell offers for whitelisted items automatically via RuneList API, save in database with timestamps and calculate profit</li>\r   <li>Build website, import 90% of code </li>\r </ol>",
   "devDependencies": {
     "eslint": "^8.12.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/BrianLiang938/ge-watcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrianLiang938/ge-watcher/issues"
+  },
+  "homepage": "https://github.com/BrianLiang938/ge-watcher#readme"
 }
