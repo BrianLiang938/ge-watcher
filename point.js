@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Point = new Schema({
+    id: {
+        type: Number,
+    },
     date: {
         type: String,
     },

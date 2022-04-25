@@ -59,7 +59,7 @@ app.get('/:id', dataPull, function(req, res) {
     string = string + '<br/>';
   }
   //
-  const currPoint = makePoint(req.data.at(-1).timestamp, req.data.at(-1).avgHighPrice, averages[0], devs[0]);
+  const currPoint = makePoint(req.params.id, req.data.at(-1).timestamp, req.data.at(-1).avgHighPrice, averages[0], devs[0]);
   console.log(currPoint);
   db.collection('points').insertOne(currPoint);
   res.send(string);
@@ -98,8 +98,8 @@ function standardDev(array, avg) {
   return Math.sqrt(output / count);
 }
 
-function makePoint(pDate, pPrice, pMean, pStddev) {
-  const output = new Points({ date: pDate, price:pPrice, mean:pMean, stdDev: pStddev });
+function makePoint(id, pDate, pPrice, pMean, pStddev) {
+  const output = new Points({ id: id, date: pDate, price:pPrice, mean:pMean, stdDev: pStddev });
   if (pMean - pStddev > pPrice) {
     output.buy = true;
   }
