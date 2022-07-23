@@ -1,7 +1,7 @@
 # ge-watcher
 <h1>TODO</h1>
 
-- Website version of discord
+- Website version of discord version
 
 <h3>Issues</h3>
 - none (yet)
